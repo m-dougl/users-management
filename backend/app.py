@@ -7,9 +7,9 @@ import models
 from fastapi import FastAPI, HTTPException, Depends, status
 from sqlalchemy.orm import Session, sessionmaker
 from sqlalchemy.exc import SQLAlchemyError
-from backend.crud import create_user, get_user, get_users, update_user, delete_user
-from backend.schemas import User, UserCreate
-from backend.database import PostgreSQL
+from crud import create_user, get_user, get_users, update_user, delete_user
+from schemas import User, UserCreate
+from database import PostgreSQL
 from typing import List
 
 database_handler = PostgreSQL()
