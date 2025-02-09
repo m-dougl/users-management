@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  backend:
+    container_name: 'fastapi-users-management'
+    build: ./backend/Dockefile
