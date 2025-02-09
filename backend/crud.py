@@ -9,7 +9,23 @@ from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 from models import User
 
+def create_user(db: Session, user: UserCreate) -> User:
+    """
+    Creates a new user in the database using the provided user data.
 
+    Parameters:
+    db (Session): The SQLAlchemy session object for database operations.
+    user (UserCreate): The data for the new user.
+
+    Returns:
+    User: The newly created user object.
+    """
+    
+    db_user = User(**user.model_dump())
+    db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return db_user
 def get_user(db: Session, user_id: int) -> User:
     """
     Retrieves a user from the database based on the provided user ID.
