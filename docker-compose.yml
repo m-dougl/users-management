@@ -3,4 +3,12 @@ version: '3'
 services:
   backend:
     container_name: 'fastapi-users-management'
-    build: ./backend/Dockefile
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/logs
