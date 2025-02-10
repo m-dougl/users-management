@@ -3,7 +3,7 @@ This module defines Pydantic models (schemas) for the application.
 """
 
 from pydantic import BaseModel, EmailStr
-from datetime import datetime
+from datetime import date
 
 
 class UserBase(BaseModel):
@@ -17,7 +17,7 @@ class UserBase(BaseModel):
     """
 
     username: str
-    birth_date: datetime
+    birth_date: date
     email: EmailStr
 
 
