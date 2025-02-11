@@ -24,7 +24,7 @@ To get started with the UMS, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/users-management.git
+   git clone https://github.com/m-dougl/users-management.git
    ```
 2. Navigate to the project directory
     ```bash
