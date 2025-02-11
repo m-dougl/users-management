@@ -27,7 +27,7 @@ def get_db():
     Yields:
     db (Session): The SQLAlchemy session object for database operations.
     """
-    
+
     db = SessionLocal()
     try:
         yield db
