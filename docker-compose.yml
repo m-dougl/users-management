@@ -12,3 +12,15 @@ services:
       - .env
     volumes:
       - ./logs:/logs
+
+  frontend:
+    container_name: 'streamlit-users-management'
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    depends_on:
+      - backend
